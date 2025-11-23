@@ -33,7 +33,7 @@ def _sort_radix(arr: List[int], base: int) -> List[int]:
     return arr
 
 def radix_sort(a: List[int], base: int = 10) -> List[int]:
-    """Поразрядная сортировка """
+    """Поразрядная сортировка"""
     if not isinstance(a, list):
         raise TypeError("Аргумент должен быть списком")
     if not all(isinstance(x, int) for x in a):
@@ -108,7 +108,7 @@ def bucket_sort(a: List[float], buckets: int | None = None) -> List[float]:
 
 
 def _heapify(arr: List[int], start: int, end: int) -> None:
-    """Преобразование в двоичую кучу поддерева"""
+    """Преобразование в двоичную кучу поддерева"""
     root = start
     while True:
         child = 2 * root + 1
