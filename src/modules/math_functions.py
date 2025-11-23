@@ -2,8 +2,7 @@
 Реализация функций факториала и Фибоначчи
 """
 
-
-def factorial(n):
+def factorial(n: int) -> int:
     """Итеративное вычисление факториала"""
     if n < 0:
         raise ValueError("Факториал не определён для отрицательных чисел")
@@ -13,7 +12,7 @@ def factorial(n):
     return res
 
 
-def factorial_recursive(n):
+def factorial_recursive(n: int) -> int:
     """Рекурсивное вычисление факториала"""
     if n < 0:
         raise ValueError("Факториал не определён для отрицательных чисел")
@@ -22,7 +21,7 @@ def factorial_recursive(n):
     return n * factorial_recursive(n - 1)
 
 
-def fibo(n):
+def fibo(n: int) -> int:
     """Итеративное вычисление числа Фибоначчи """
     if n < 0:
         raise ValueError("Индекс Фибоначчи не может быть отрицательным")
@@ -34,7 +33,7 @@ def fibo(n):
     return b
 
 
-def fibo_recursive(n):
+def fibo_recursive(n: int) -> int:
     """Рекурсивное вычисление числа Фибоначчи"""
     if n < 0:
         raise ValueError("Индекс Фибоначчи не может быть отрицательным")
