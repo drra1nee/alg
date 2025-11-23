@@ -34,6 +34,7 @@ def main():
         print("8 — radix_sort(a, base)")
         print("9 — heap_sort(a)")
         print("10 — bucket_sort(a, buckets)")
+        print("Примечание: на вход функций 1-9 должны поступать целые числа, для функции 10 можно и целые, и вещественные")
 
         choice = input("\nНомер (1–10) или 'exit': ").strip()
         if choice == 'exit':
