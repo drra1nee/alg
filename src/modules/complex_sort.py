@@ -108,7 +108,7 @@ def bucket_sort(a: List[float], buckets: int | None = None) -> List[float]:
 
 
 def _heapify(arr: List[int], start: int, end: int) -> None:
-    """Преобразование в двоичную кучу поддерева"""
+    """Преобразование в двоичную кучу поддерева(max-heap)"""
     root = start
     while True:
         child = 2 * root + 1
