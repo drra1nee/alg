@@ -107,22 +107,20 @@ def bucket_sort(a: List[float], buckets: int | None = None) -> List[float]:
     return result
 
 
-def _sift_down(arr: List[int], start: int, end: int) -> None:
-    """
-    Просеивание вниз в max-heap
-    """
+def _heapify(arr: List[int], start: int, end: int) -> None:
+    """Преобразование в двоичую кучу поддерева"""
     root = start
     while True:
-        child = 2 * root + 1  # Левый потомок
+        child = 2 * root + 1
         if child >= end:
             break
         # Выбираем большего из потомков
         if child + 1 < end and arr[child] < arr[child + 1]:
             child += 1
-        # Если root не меньше потомка стоп
+        # Если корень не меньше потомка, стоп
         if arr[root] >= arr[child]:
             break
-        # Иначе, переставляем и продолжаем вниз
+        # Иначе переставляем и меняем корень
         arr[root], arr[child] = arr[child], arr[root]
         root = child
 
@@ -136,12 +134,12 @@ def heap_sort(a: List[int]) -> List[int]:
         return a[:]
     arr = a[:]
     n = len(arr)
-    # Построение max-heap: от последнего родителя до корня
+    # Построение max-heap
     for i in range((n - 2) // 2, -1, -1):
-        _sift_down(arr, i, n)
+        _heapify(arr, i, n)
     # Извлечение элементов
-    for end in range(n - 1, 0, -1):
-        arr[0], arr[end] = arr[end], arr[0]
-        # Восстанавливаем кучу
-        _sift_down(arr, 0, end)
+    for i in range(n - 1, 0, -1):
+        arr[0], arr[i] = arr[i], arr[0]
+        # Восстанавливаем отсортированную кучу
+        _heapify(arr, 0, i)
     return arr
