@@ -65,7 +65,7 @@ def _insertion_sort(a: List[float]) -> List[float]:
         arr[j + 1] = key
     return arr
 
-def bucket_sort(a: List[float], buckets: int | None = None) -> List[float]:
+def bucket_sort(a: List[int | float], buckets: int | None = None) -> List[float]:
     """Блочная сортировка с нормализацией"""
     if not isinstance(a, list):
         raise TypeError("Аргумент должен быть списком")
@@ -107,7 +107,7 @@ def bucket_sort(a: List[float], buckets: int | None = None) -> List[float]:
     return result
 
 
-def _heapify(arr: List[int], start: int, end: int) -> None:
+def _heapify(arr: List[int | float], start: int, end: int) -> None:
     """Преобразование в двоичную кучу поддерева(max-heap)"""
     root = start
     while True:
@@ -124,12 +124,12 @@ def _heapify(arr: List[int], start: int, end: int) -> None:
         arr[root], arr[child] = arr[child], arr[root]
         root = child
 
-def heap_sort(a: List[int]) -> List[int]:
+def heap_sort(a: List[int | float]) -> List[int | float]:
     """Пирамидальная сортировка"""
     if not isinstance(a, list):
         raise TypeError("Аргумент должен быть списком")
-    if not all(isinstance(x, int) for x in a):
-        raise ValueError("Все элементы должны быть целыми числами")
+    if not all(isinstance(x, (int, float)) for x in a):
+        raise ValueError("Все элементы списка должны быть числами (int/float)")
     if len(a) <= 1:
         return a[:]
     arr = a[:]

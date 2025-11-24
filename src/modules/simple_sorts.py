@@ -4,12 +4,12 @@
 
 from typing import List
 
-def bubble_sort(a: List[int]) -> List[int]:
+def bubble_sort(a: List[int | float]) -> List[int | float]:
     """Пузырьковая сортировка"""
     if not isinstance(a, list):
         raise TypeError("Аргумент должен быть списком")
-    if not all(isinstance(x, int) for x in a):
-        raise ValueError("Все элементы списка должны быть целыми числами")
+    if not all(isinstance(x, (int, float)) for x in a):
+        raise ValueError("Все элементы списка должны быть числами (int/float)")
     n = len(a)
     arr = a[:]
     # Внешний цикл: итерация по всей длине списка
@@ -25,12 +25,12 @@ def bubble_sort(a: List[int]) -> List[int]:
     return arr
 
 
-def quick_sort(a: List[int]) -> List[int]:
+def quick_sort(a: List[int | float]) -> List[int | float]:
     """Быстрая сортировка"""
     if not isinstance(a, list):
         raise TypeError("Аргумент должен быть списком")
-    if not all(isinstance(x, int) for x in a):
-        raise ValueError("Все элементы списка должны быть целыми числами")
+    if not all(isinstance(x, (int, float)) for x in a):
+        raise ValueError("Все элементы списка должны быть числами (int/float)")
     arr = a[:]
     if len(arr) <= 1:
         return arr
