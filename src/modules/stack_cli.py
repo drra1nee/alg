@@ -84,4 +84,4 @@ def stack_inter():
                 print(f"Неизвестная команда: '{cmd}'")
 
         except Exception as e:
-            print("Неожиданная ошибка:", type(e).__name__, "—", e)
+            print("Неожиданная ошибка:", type(e).__name__, "-", e)

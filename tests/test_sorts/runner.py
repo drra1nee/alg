@@ -146,5 +146,5 @@ def test_sorts_on_arrays():
             t = timeit_once(func, test_array[:])
             print(f"{name:<15} | {status:<12} | {t:>12.6f}")
         except Exception as e:
-            print(f"{name:<15} | {'ERROR':<12} | {'—':>12} - {type(e).__name__}")
+            print(f"{name:<15} | {'ERROR':<12} | {'-':>12} - {type(e).__name__}")
     print(f"\nИтог: {passed} из {total} сортировок прошли проверку корректности.")

@@ -37,11 +37,11 @@ def main():
         print("9 - heap_sort(a)")
         print("10 - bucket_sort(a, buckets)")
         print("11 - Stack(интерактивное взаимодействие со стеком)")
-        print("12 — Сгенерировать тест-кейсы")
-        print("13 — Протестировать сортировки и запустить бенчмарки на сгенерированных данных")
+        print("12  Сгенерировать тест-кейсы")
+        print("13 - Протестировать сортировки и запустить бенчмарки на сгенерированных данных")
         print("Примечание: counting_sort и radix_sort принимают только целые числа")
 
-        choice = input("\nНомер (1–14) или 'exit': ").strip()
+        choice = input("\nНомер (1-14) или 'exit': ").strip()
         if choice == 'exit':
             print("Выход")
             break
@@ -96,7 +96,7 @@ def main():
         except RecursionError:
             print("Ошибка: превышена глубина рекурсии")
         except Exception as e:
-            print("Ошибка:", type(e).__name__, "—", e)
+            print("Ошибка:", type(e).__name__, "-", e)
 
 
 if __name__ == "__main__":
