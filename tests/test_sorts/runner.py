@@ -135,13 +135,13 @@ def test_sorts_arr():
     print("-" * 50)
     passed = 0
     total = len(selected_indices)
-    for idx in selected_indices:
-        name, func = sort_algorithms[idx]
+    for x in selected_indices:
+        name, func = sort_algorithms[x]
         try:
             result = func(test_array[:])
-            is_ok = (result == reference)
-            status = "OK" if is_ok else "FAIL"
-            if is_ok:
+            ok = (result == reference)
+            status = "OK" if ok else "FAIL"
+            if ok:
                 passed += 1
             t = timeit_once(func, test_array[:])
             print(f"{name:<15} | {status:<12} | {t:>12.6f}")
