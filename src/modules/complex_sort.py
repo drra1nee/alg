@@ -33,7 +33,7 @@ def _sort_radix(arr: List[int], base: int) -> List[int]:
     return arr
 
 def radix_sort(a: List[int], base: int = 10) -> List[int]:
-    """Поразрядная сортировка"""
+    """Поразрядная сортировка, есть поддержка отрицательных чисел"""
     if not isinstance(a, list):
         raise TypeError("Аргумент должен быть списком")
     if not all(isinstance(x, int) for x in a):

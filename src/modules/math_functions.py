@@ -37,13 +37,11 @@ def fibo_recursive(n: int) -> int:
     """Рекурсивное вычисление числа Фибоначчи"""
     if n < 0:
         raise ValueError("Индекс Фибоначчи не может быть отрицательным")
-
-    # Кэшируем результаты, чтобы каждое F(k) вычислялось один раз
+    # Кэшируем результаты, чтобы каждое f(k) вычислялось один раз
     memo = {0: 0, 1: 1}
     def fib(k):
         if k in memo:
             return memo[k]
         memo[k] = fib(k - 1) + fib(k - 2)
         return memo[k]
-
     return fib(n)

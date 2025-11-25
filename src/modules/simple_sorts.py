@@ -44,7 +44,7 @@ def quick_sort(a: List[int | float]) -> List[int | float]:
 
 
 def counting_sort(a: List[int]) -> List[int]:
-    """Сортировка подсчётом"""
+    """Сортировка подсчётом, есть поддержка отрицательных чисел"""
     if not isinstance(a, list):
         raise TypeError("Аргумент должен быть списком")
     if not all(isinstance(x, int) for x in a):
