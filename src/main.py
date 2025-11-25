@@ -2,7 +2,7 @@ from src.modules.math_functions import factorial, factorial_recursive, fibo, fib
 from src.modules.simple_sorts import quick_sort, bubble_sort, counting_sort
 from src.modules.complex_sort import radix_sort, bucket_sort, heap_sort
 from src.modules.stack_cli import stack_inter
-from tests.test_sorts.runner import generate_test_cases, test_sorts_on_arrays
+from tests.test_sorts.runner import generate_test_cases, test_sorts_arr
 from typing import List
 
 
@@ -83,13 +83,14 @@ def main():
                     res = bucket_sort(arr, buckets)
                 print(f"Исходный: {arr}")
                 print(f"Результат: {res}\n")
-
+            # Стек
             elif choice == "11":
                 stack_inter()
+            # Генерация массивов и тестирование
             elif choice == "12":
                 generate_test_cases()
             elif choice == "13":
-                test_sorts_on_arrays()
+                test_sorts_arr()
 
         except ValueError as e:
             print("Ошибка ввода:", e)

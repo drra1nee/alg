@@ -5,7 +5,7 @@ from tests.test_sorts.benchmark import timeit_once
 from src.modules.simple_sorts import bubble_sort, quick_sort, counting_sort
 from src.modules.complex_sort import radix_sort, bucket_sort, heap_sort
 
-# Глобальное хранилище
+# Глобальное хранилище для хранения сгенерированных массивов
 GENERATED_ARRAYS = {}
 
 def generate_test_cases():
@@ -67,7 +67,7 @@ def generate_test_cases():
         print("Ошибка генерации:", e)
 
 
-def test_sorts_on_arrays():
+def test_sorts_arr():
     """Меню для тестирования сгенерированных массивов и вывода их бенчмарка"""
     global GENERATED_ARRAYS
     if not GENERATED_ARRAYS:
