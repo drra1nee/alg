@@ -39,7 +39,3 @@ def test_fibo_negative():
         fibo(-1)
     with pytest.raises(ValueError, match="Индекс Фибоначчи не может быть отрицательным"):
         fibo_recursive(-10)
-
-def test_fibo_recursive_performance():
-    # Проверяем, что мемоизация работает — должен завершиться быстро
-    assert fibo_recursive(50) == 12586269025

@@ -130,7 +130,6 @@ def test_sorts_on_arrays():
         6: ("bucket_sort", lambda a: bucket_sort(a, buckets=buckets)),
     }
     reference = sorted(test_array)
-
     print(f"\nЗапуск тестов на массиве '{selected_name}' (n = {len(test_array)})...")
     print(f"{'Алгоритм':<15} | {'Корректность':<12} | {'Время (сек)':>12}")
     print("-" * 50)

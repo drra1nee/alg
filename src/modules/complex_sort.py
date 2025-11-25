@@ -5,7 +5,7 @@
 from typing import List
 
 def _sort_radix(arr: List[int], base: int) -> List[int]:
-    """Вспомогательная сортировка для radix"""
+    """Вспомогательная функция для radix"""
     if not arr:
         return []
     max_val = max(arr)
