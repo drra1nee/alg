@@ -118,7 +118,7 @@ def test_sorts_arr():
             b_input = input("Число блоков для bucket_sort (По умолчанию, без ввода - длина массива): ").strip()
             buckets = int(b_input) if b_input else len(test_array)
         except ValueError:
-            print("Некорректное число блоков, будет использовано значение по умолчанию.")
+            print("Некорректное число блоков, будет использовано значение по умолчанию")
             buckets = None
 
     sort_algorithms = {
