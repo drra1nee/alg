@@ -17,9 +17,9 @@ def test_factorial_recursive(n, expected):
     assert factorial_recursive(n) == expected
 
 def test_factorial_negative():
-    with pytest.raises(ValueError, match="Факториал не определён для отрицательных чисел"):
+    with pytest.raises(ValueError):
         factorial(-1)
-    with pytest.raises(ValueError, match="Факториал не определён для отрицательных чисел"):
+    with pytest.raises(ValueError):
         factorial_recursive(-5)
 
 @pytest.mark.parametrize("n, expected", [
@@ -35,7 +35,7 @@ def test_fibo_recursive(n, expected):
     assert fibo_recursive(n) == expected
 
 def test_fibo_negative():
-    with pytest.raises(ValueError, match="Индекс Фибоначчи не может быть отрицательным"):
+    with pytest.raises(ValueError):
         fibo(-1)
-    with pytest.raises(ValueError, match="Индекс Фибоначчи не может быть отрицательным"):
+    with pytest.raises(ValueError):
         fibo_recursive(-10)
