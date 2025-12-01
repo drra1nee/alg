@@ -105,7 +105,7 @@ def test_sorts_arr():
         selected_indices = [int(x) for x in raw_input.split() if x.isdigit()]
         selected_indices = [i for i in selected_indices if 1 <= i <= 6]
         if not selected_indices:
-            print("Ни одна сортировка не выбрана.")
+            print("Ни одна сортировка не выбрана")
             return
     except Exception:
         print("Ошибка при обработке ввода")
@@ -147,4 +147,4 @@ def test_sorts_arr():
             print(f"{name:<15} | {status:<12} | {t:>12.6f}")
         except Exception as e:
             print(f"{name:<15} | {'ERROR':<12} | {'-':>12} - {type(e).__name__}")
-    print(f"\nИтог: {passed} из {total} сортировок прошли проверку корректности.")
+    print(f"\nИтог: {passed} из {total} сортировок прошли проверку корректности")
