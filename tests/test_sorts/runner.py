@@ -24,7 +24,7 @@ def generate_test_cases():
     print("4 - Массив с числами по убыванию")
     print("5 - Массив со случайными дробными числами")
 
-    typ = input("Тип (1–5): ").strip()
+    typ = input("Тип (1-5): ").strip()
     try:
         if typ == '1':
             n = int(input("Количество чисел: "))
